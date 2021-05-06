@@ -18,7 +18,7 @@ function getQueryStringArray(){
 }
 
 var qs = getQueryStringArray();
-var url = qs.redirecturl ? qs.redirecturl : null;
+var url = qs.redirecturl ? decodeURIComponent(qs.redirecturl) : null;
 document.getElementById("redirect-url").innerHTML = url;
 setTimeout(function(){ 
     window.location.href = url;
