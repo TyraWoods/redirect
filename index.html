@@ -20,8 +20,9 @@ function getQueryStringArray(){
 var qs = getQueryStringArray();
 var url = qs.redirecturl ? qs.redirecturl : null;
 document.getElementById("redirect-url").innerHTML = url;
-wait(10000);
-window.location.href = url;
+setTimeout(function(){ 
+    window.location.href = url;
+}, 10000);  
  </script>
 
 </body>
